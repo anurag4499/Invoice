@@ -32,12 +32,14 @@ app.get('/', (req, res) => {
 
 
 const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port : "587",
-  auth: {
-  user: "anuragmishra4499@gmail.com",
-  pass: "vmea bqbr dgtu mmsj"
+
+  host: process.env.SMTP_HOST,
+    port : process.env.SMTP_PORT,
+    auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS
   },
+  
   tls:{
       rejectUnauthorized:false
   }
@@ -70,7 +72,7 @@ app.post('/send-pdf', (req, res) => {
 
 
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8081;
 app.listen(PORT , () => {
     console.log(`Server listening on ${PORT}`);
 });
