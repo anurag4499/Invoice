@@ -27,7 +27,7 @@ const invoiceRoutes = require('./routes/invoiceRoute')
 app.use('/api/invoices', invoiceRoutes);
 
 app.get('/', (req, res) => {
-  res.send("Welcome to Novu Invoice API.")
+  res.send("Welcome to Invoice Amigo Softcom.")
 })
 
 
