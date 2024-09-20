@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const connectToDatabase = require("./db");
+const connectToDatabase = require("./database/db");
 const nodemailer =require ('nodemailer');
 const pdf = require('html-pdf');
 const cors = require('cors');
@@ -10,7 +10,15 @@ require("dotenv").config()
 
 app.use(express.json());
 
-app.use(cors());
+// app.use(cors());
+
+app.use(cors(
+    {
+      origin:["https://invoice-front-xi.vercel.app"],
+      methods:["POST", "GET", "PUT", "DELETE"],
+      credentials:true
+    }
+  ))
 
 connectToDatabase();
 
