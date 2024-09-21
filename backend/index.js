@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.use(cors(
     {
-      origin:["https://invoice-front-xi.vercel.app"],
+      origin:[process.env.REACT_API],
       methods:["POST", "GET", "PUT", "DELETE"],
       credentials:true
     }
