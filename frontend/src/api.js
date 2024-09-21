@@ -1,9 +1,9 @@
 import axios from "axios";
-require("dotenv").config()
+
 
 const api = axios.create({
-  baseURL: process.env.SERVER_API,
-  // baseURL: process.env.test_api,
+  baseURL: 'https://invoice-back.vercel.app/',
+  
 });
 
 export default api;
