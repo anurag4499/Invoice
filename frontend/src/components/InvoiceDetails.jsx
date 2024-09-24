@@ -121,7 +121,7 @@ const InvoiceDetails = () => {
                 <img src={logo} alt="Logo" className="h-12 mb-2" />
               </Link>
               <h1 className="text-2xl font-medium">Novu Invoice</h1>
-              <p>Lagos, Nigeria</p>
+              <p>Mumbai, India</p>
             </div>
             
             <div className="flex items-start">
